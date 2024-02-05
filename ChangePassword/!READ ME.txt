@@ -1,0 +1,9 @@
+mkdir patch
+curl -Ls https://raw.githubusercontent.com/slc-na/MAC-Patching/main/ChangePassword/changeRootPassword.sh -o ./patch/changeRootPassword.sh
+
+chmod +x ./patch/changeRootPassword.sh
+./patch/changeRootPassword.sh '[user]' '[old password]' '[password]'
+rm -rf patch
+
+history -c
+rm .bash_history

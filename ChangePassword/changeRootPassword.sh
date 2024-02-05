@@ -1,7 +1,8 @@
 #!/bin/sh
 
-/usr/bin/dscl . passwd /Users/$1 $2
+/usr/bin/dscl . passwd /Users/$1 $2 $3
 status=$?
+printf '%s\n' "$3"
 
 if [ $status == 0 ]; then
 
@@ -14,3 +15,4 @@ echo "An error was encountered while attempting to change the password. /usr/bin
 fi
 
 exit $status
+s
